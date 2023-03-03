@@ -1,0 +1,270 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    padding: 10px 30px;
+    background-color: rgb(108, 37, 37);
+
+}
+
+.header h5 {
+    color: white;
+    font-size: larger;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+/* upper-btn-box */
+.upper-btn-box {
+    width: 100%;
+    height: 50px;
+    /* background: red; */
+    display: flex;
+    padding: 10px;
+}
+
+/* btn-left-box */
+.upper-btn-box .left-box {
+    width: 50%;
+    height: 100%;
+    /* background-color: rgb(64, 69, 67); */
+}
+.upper-btn-box .left-box input[type="checkbok"]{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.upper-btn-box button {
+    /* border: none; */
+    outline: none;
+    background-color: rgb(255, 145, 0);
+    padding: 10px;
+    font-size: larger;
+    color: white;
+    font-weight: 400;
+    border-radius: 5%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.upper-btn-box button:hover {
+    background-color: rgb(232, 132, 1);
+}
+
+.upper-btn-box button:active {
+    border-bottom: 2px solid rgb(129, 129, 129);
+    border-right: 2px solid rgb(129, 129, 129);
+}
+
+/* btn-right-box */
+.upper-btn-box .right-box {
+    width: 50%;
+    height: 100%;
+
+    /* background-color: rgb(35, 68, 57); */
+}
+
+/* .upper-btn-box .right-box input::selection {
+        border-bottom: 2px solid rgb(56, 56, 56);
+} */
+.upper-btn-box .right-box input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 60%;
+    font-size: 20px;
+    border-bottom: 2px solid black;
+
+}
+
+.upper-btn-box .right-box i {
+    padding: 5px;
+
+}
+
+/* start table-box */
+.table-box {
+    width: 100%;
+    padding: 30px;
+
+}
+
+.table-box table {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.table-box table tr th {
+    border-left: 1px solid #ccc;
+    padding-top: 5px;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 1px solid #ccc;
+}
+
+.table-box table tr td {
+    border-left: 1px solid #ccc;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 1px solid #ccc;
+}
+
+.table-box table tr td button {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* modal */
+.modal {
+    width: 0%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 590px;
+    background-color: rgb(255, 255, 255);
+    transform: translate(-50%, -50%);
+    display: flex;
+    box-shadow: 0px 10px 20px 5px black;
+    opacity: 0;
+    z-index: -1;
+    transition: 0.3s ease-in;
+}
+.modal.active{
+    opacity: 1;
+    z-index: 1;
+    width: 60%;
+}
+.modal #close-tab {
+    position: absolute;
+    right: 0;
+    font-size: 30px;
+    color: rgb(143, 143, 143);
+    padding: 5px;
+}
+.modal #close-tab:hover{
+    color: red;
+}
+.modal #close-tab:active{
+    color: rgb(184, 85, 85);
+}
+.modal .left-modal {
+    width: 30%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-right: 1px solid rgb(194, 194, 194);
+}
+
+.modal .left-modal .img-box {
+    width: 100%;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.modal .left-modal .img-box img {
+    border-radius: 50%;
+    width: 100%;
+    /* position:absolute; */
+}
+
+.modal .left-modal .img-box i {
+
+    color: rgb(135, 135, 135);
+}
+
+.modal .left-modal .img-box input {
+    width: 100px;
+    height: 50px;
+    font-size: 15px;
+}
+
+.modal .right-modal {
+    width: 60%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+}
+
+.modal .right-modal .input-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.modal .right-modal .input-box label {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 25px 0px;
+}
+
+.modal .right-modal .input-box input {
+    width: 55%;
+    margin: 10px 0px;
+    border: none;
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
+    transition: .6s;
+    font-size: 18px;
+}
+
+.modal .right-modal .bt .bt1 {
+    border: none;
+    outline: none;
+    background-color: rgb(255, 145, 0);
+    padding: 10px;
+    font-size: larger;
+    color: white;
+    font-weight: 400;
+    border-radius: 5%;
+    margin: 5px;
+    width: 40%;
+}
+.modal .right-modal .bt .bt1:hover {
+    background-color: rgb(232, 132, 1);
+}
+
+.modal .right-modal .bt .bt1:active {
+    border-bottom: 2px solid rgb(129, 129, 129);
+    border-left: 2px solid rgb(129, 129, 129);
+}
+.modal .right-modal .bt .bt2 {
+    border: none;
+    outline: none;
+    background-color: rgb(91, 136, 0);
+    padding: 10px;
+    font-size: larger;
+    color: white;
+    font-weight: 400;
+    border-radius: 5%;
+    margin: 5px;
+    margin-left: 10%;
+    width: 40%;
+    
+}
+.modal .right-modal .bt .bt2:disabled{
+    filter: grayscale(70%);
+}
+.modal .right-modal .bt .bt2:hover {
+    background-color: rgb(88, 176, 0);
+}
+
+.modal .right-modal .bt .bt2:active {
+    border-bottom: 2px solid rgb(129, 129, 129);
+    border-left: 2px solid rgb(129, 129, 129);
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Crud App</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+
+<body>
+    <div class="header">
+        <h5>User Details</h5>
+    </div>
+    <div class="upper-btn-box">
+        <div class="left-box">
+            <button id="add-btnss"><i class="fa fa-plus"></i> &nbsp; ADD New Users</button>
+            <button id="del-all-btn" style="background-color: rgb(184, 91, 67);"><i class="fa fa-eraser"></i> &nbsp; Clear ALL</button>
+            <input type="checkbox" id="del-all-box">
+        </div>
+        <div class="right-box">
+            <i class="fa fa-search"></i>
+            <input type="text" id="emId" placeholder="Search..">
+            <button id="serch">Search</button>
+        </div>
+    </div>
+    <div class="table-box">
+        <table >
+            <tr>
+                <th>Sr NO.</th>
+                <th>Profile</th>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Office Code</th>
+                <th>Job Title</th>
+                <th>Action</th>
+            </tr>
+            <tbody id="table-data"> </tbody>
+        </table>
+    </div>
+    <div class="modal">
+        <i id="close-tab" class="fa fa-times-circle "></i>
+        <div class="left-modal">
+            <div class="img-box">
+                <img src="img/img.png" id="profile-pic"  alt="">
+                <i class="fa fa-plus" style="font-size: 30px ; padding: 10px; float: left;"></i>
+                <input type="file" id="upload-field">
+            </div>
+
+        </div>
+        <div class="right-modal">
+            <form id="registe-Form">
+
+                <div class="input-box">
+                    <label for="id">Id</label>
+                    <input type="text" name="" id="id">
+                </div>
+                <div class="input-box">
+                    <label for="name">Name</label>
+                    <input type="text" name="" id="name" required  >
+                </div>
+                <div class="input-box">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" name="" id="last-name" required  >
+                </div>
+                <div class="input-box">
+                    <label for="j-title">Job Title</label>
+                    <input type="text" name="" id="j-title" required  >
+                </div>
+                <div class="input-box">
+                    <label for="email">Email</label>
+                    <input type="email" name="" id="email" required  >
+                </div>
+                <div class="input-box">
+                    <label for="ofiice-code">Office Code</label>
+                    <input type="text" name="" id="office-code" required  >
+                </div>
+                <div class="bt">
+                    <button  class="bt1" type="submit">Register</button>
+                    <button class="bt2" id="update-btn" disabled='disabled'>Update</button>
+                </div>
+            </form>
+            <!-- <div class="input-box">
+                <label for="job-title">Job Title</label>
+                <input type="text" name="" id="job-title">
+            </div> -->
+        </div>
+    </div>
+    <script src="App.js"></script>
+</body>
+
+</html>
